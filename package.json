@@ -1,0 +1,24 @@
+{
+  "name": "cambridge-women",
+  "version": "1.0.0",
+  "description": "crowd sourced city project spring 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node myapp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lennajohnsen/cambridge-women.git"
+  },
+  "author": "lenna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lennajohnsen/cambridge-women/issues"
+  },
+  "homepage": "https://github.com/lennajohnsen/cambridge-women#readme",
+  "dependencies": {
+    "enter-view": "^2.0.0",
+    "express": "^4.17.1"
+  }
+}
