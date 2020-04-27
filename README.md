@@ -28,6 +28,6 @@ then navigate to
 
 http://127.0.0.1:8080/
 
-to see the site.
+to see the site. use ctrl-shift-r for a hard refresh if it looks like things aren't updating.
 
-
+Use ctrl-c to stop the server from running. 
