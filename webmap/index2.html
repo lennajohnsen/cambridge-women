@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" type="text/css" href="../styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;600&display=swap" rel="stylesheet">
+        <style>
+            
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        
+        <title></title>
+    </head>
+    <body>
+
+        <div class='header'>
+
+            <div class='site-title'>
+                <h1>Street Map of Cambridge</h1>
+            </div>
+        
+            <div class='nav-icons'>
+                <a href="index.html">return home</a> 
+                <a href="process.html">process</a> 
+                <a href="games.html">games</a>
+                <a href="map.html">map</a> 
+            </div>
+        
+        </div>
+
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="data/Streets_1.js"></script>
+        <script src="data/Streetnames_2.js"></script>
+        <script src="data/Publicschools_3.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[42.35967730063111,-71.14312107623331],[42.394833956871004,-71.10211317231153]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        map.createPane('pane_Positronretina_0');
+        map.getPane('pane_Positronretina_0').style.zIndex = 400;
+        var layer_Positronretina_0 = L.tileLayer('http://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png', {
+            pane: 'pane_Positronretina_0',
+            opacity: 1.0,
+            attribution: '<a href="https://cartodb.com/basemaps/">Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.</a>',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 20
+        });
+        layer_Positronretina_0;
+        map.addLayer(layer_Positronretina_0);
+        function pop_Streets_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['ACCESS'] !== null ? autolinker.link(feature.properties['ACCESS'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['BRIDGE'] !== null ? autolinker.link(feature.properties['BRIDGE'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['FROM'] !== null ? autolinker.link(feature.properties['FROM'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['HIGHWAY'] !== null ? autolinker.link(feature.properties['HIGHWAY'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['JUNCTION'] !== null ? autolinker.link(feature.properties['JUNCTION'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['KEY'] !== null ? autolinker.link(feature.properties['KEY'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['LANES'] !== null ? autolinker.link(feature.properties['LANES'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['LENGTH'] !== null ? autolinker.link(feature.properties['LENGTH'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['MAXSPEED'] !== null ? autolinker.link(feature.properties['MAXSPEED'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NAME'] !== null ? autolinker.link(feature.properties['NAME'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['ONEWAY'] !== null ? autolinker.link(feature.properties['ONEWAY'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['OSMID'] !== null ? autolinker.link(feature.properties['OSMID'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['REF'] !== null ? autolinker.link(feature.properties['REF'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['TO'] !== null ? autolinker.link(feature.properties['TO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['TUNNEL'] !== null ? autolinker.link(feature.properties['TUNNEL'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['WIDTH'] !== null ? autolinker.link(feature.properties['WIDTH'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['AREA'] !== null ? autolinker.link(feature.properties['AREA'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['LAYER'] !== null ? autolinker.link(feature.properties['LAYER'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['PATH'] !== null ? autolinker.link(feature.properties['PATH'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CITY_ID'] !== null ? autolinker.link(feature.properties['CITY_ID'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['STREETINFO'] !== null ? autolinker.link(feature.properties['STREETINFO'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Streets_1_0() {
+            return {
+                pane: 'pane_Streets_1',
+                opacity: 0,
+                color: 'rgba(170,182,187,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Streets_1');
+        map.getPane('pane_Streets_1').style.zIndex = 401;
+        map.getPane('pane_Streets_1').style['mix-blend-mode'] = 'normal';
+        var layer_Streets_1 = new L.geoJson(json_Streets_1, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Streets_1',
+            layerName: 'layer_Streets_1',
+            pane: 'pane_Streets_1',
+            onEachFeature: pop_Streets_1,
+            style: style_Streets_1_0,
+        });
+        bounds_group.addLayer(layer_Streets_1);
+        map.addLayer(layer_Streets_1);
+        function pop_Streetnames_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row"> </th>\
+                        <td>' + (feature.properties['exp1'] !== null ? autolinker.link(feature.properties['exp1'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Streetnames_2_0(feature) {
+            switch(String(feature.properties['d__final_2'])) {
+                case 'female':
+                    return {
+                pane: 'pane_Streetnames_2',
+                opacity: 1,
+                color: 'rgba(244,117,223,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'male':
+                    return {
+                pane: 'pane_Streetnames_2',
+                opacity: 1,
+                color: 'rgba(57,101,204,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'unknown':
+                    return {
+                pane: 'pane_Streetnames_2',
+                opacity: 1,
+                color: 'rgba(51,181,73,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'other':
+                    return {
+                pane: 'pane_Streetnames_2',
+                opacity: 1,
+                color: 'rgba(163,171,179,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                default:
+                    return {
+                pane: 'pane_Streetnames_2',
+                opacity: 0,
+                color: 'rgba(163,171,179,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    
+                    break;
+            }
+        }
+        map.createPane('pane_Streetnames_2');
+        map.getPane('pane_Streetnames_2').style.zIndex = 402;
+        map.getPane('pane_Streetnames_2').style['mix-blend-mode'] = 'normal';
+        var layer_Streetnames_2 = new L.geoJson(json_Streetnames_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Streetnames_2',
+            layerName: 'layer_Streetnames_2',
+            pane: 'pane_Streetnames_2',
+            onEachFeature: pop_Streetnames_2,
+            style: style_Streetnames_2_0,
+        });
+        bounds_group.addLayer(layer_Streetnames_2);
+        map.addLayer(layer_Streetnames_2);
+        function pop_Publicschools_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">SITE_NAME</th>\
+                        <td>' + (feature.properties['SITE_NAME'] !== null ? autolinker.link(feature.properties['SITE_NAME'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 350});
+        }
+
+        function style_Publicschools_3_0() {
+            return {
+                pane: 'pane_Publicschools_3',
+                radius: 4.0,
+                stroke: false,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(112,30,219,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Publicschools_3');
+        map.getPane('pane_Publicschools_3').style.zIndex = 403;
+        map.getPane('pane_Publicschools_3').style['mix-blend-mode'] = 'normal';
+        var layer_Publicschools_3 = new L.geoJson(json_Publicschools_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Publicschools_3',
+            layerName: 'layer_Publicschools_3',
+            pane: 'pane_Publicschools_3',
+            onEachFeature: pop_Publicschools_3,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_Publicschools_3_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Publicschools_3);
+        map.addLayer(layer_Publicschools_3);
+        setBounds();
+        resetLabels([layer_Streetnames_2,layer_Publicschools_3]);
+        map.on("zoomend", function(){
+            resetLabels([layer_Streetnames_2,layer_Publicschools_3]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_Streetnames_2,layer_Publicschools_3]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_Streetnames_2,layer_Publicschools_3]);
+        });
+        </script>
+    </body>
+</html>
