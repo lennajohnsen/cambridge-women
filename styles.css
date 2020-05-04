@@ -29,7 +29,7 @@ img {
 	display: flex;
 	margin: auto;
 	width: 60vw;
-	padding: 0 10vw 10vw 10vw;
+	padding: 0 10vw 0 10vw;
 	align-content: center;
 	flex-direction: column;
 }
