@@ -8,6 +8,10 @@ h1 {
 	margin-bottom: 3rem;
 }
 
+h1 a:link{
+	text-decoration: none;
+}
+
 p {
 	margin: 2rem;
 }
@@ -34,21 +38,44 @@ img {
 	height:10vh;
 	width: 100%;
 	background-color: #dcf0ea;
+	text-align: center;
 }
 
 .nav-icons{
 	float: right;
 	display: flex;
-	flex-direction: column;
-	height: 80%;
+	flex-direction: row;
+	/* height: 80%; */
+	width: 27%;
 	margin: 1rem 1rem 1rem 0 ;
 }
+
+.icon{
+	height: 80%;
+	border-radius: 10px;
+	background-color: teal;
+	margin: 7px;
+	padding: 0 7px 0 7px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.icon a:link a:visited {
+	text-decoration: none !important;
+	color: white;
+  }
 
 .site-title{
 	float: left;
 	margin: 0 1rem 1rem 1rem ;
-	height: 80%;
+	
 }
+
+a:visited {
+	text-decoration: none;
+  }
 
 section {
 	display: -webkit-box;
@@ -126,3 +153,5 @@ text {
 	font-size: 100px;
 	font-family: 'Antic Slab', serif;
   }
+
+
