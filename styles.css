@@ -73,6 +73,16 @@ img {
 	
 }
 
+.diy {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.diy-item {
+	width: 50%;
+}
+
 a:visited {
 	text-decoration: none;
   }
@@ -121,8 +131,8 @@ text {
 	-webkit-box-align: center;
 			align-items: center;
 	align-self: flex-start;
-	background-color: #045331;
-	color: white;
+	background-color: lightgray;
+	color: black;
 	display: -webkit-box;
 	display: flex;
 	height: auto;
