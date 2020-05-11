@@ -1,40 +1,12 @@
-# cambridge-women
-Crowd Sourced City class project spring 2020
+# About Cambridge Women Take the Streets
+Crowd Sourced City class project Spring 2020
 
+Women Take the Streets focuses on disparities in the representation of women who live or have lived in Cambridge, utilizing an Instagram filter, streetmap, and profiles of women of Cambridge. About 248,000 feet of the streets of Cambridge are named after men, while 17,450 feet were named after women -- that is only 7% of what men have.
 
-# text editors
-I use Visual Studio Code myself, https://code.visualstudio.com/ but there are other options
+Our project attempts to fulfill Mei-Po Kwan’s feminist visualization design principles by grounding mapping practices in our everyday experience of street signs. We incorporate qualitative and narrative components into the spatial representations of historical figures, symbols which a pedestrian might otherwise never consider to be the result of a political process.
 
-# github desktop
-So I use Github Desktop to keep track of changes. https://help.github.com/en/desktop/getting-started-with-github-desktop
+Our Instagram filter is one technique which, by augmenting reality, aligns with Sandra Harding’s call for strong objectivity views. The filter works toward more inclusive knowledge production by literally centering the standpoints of women who may have been excluded in their own times, and whose lives may have since gone without significant public commemoration.
 
-You'll first want to CLONE this repo, and when you've done changes COMMIT them and then PUSH to the repo. 
+D’Ignazio and Klein remind us to “emphasize representational strategies premised on multiplicity rather than binaries, and acknowledge the limits of any binaristic view”, and suggest better representations of gender are continuous or multidimensional (Feminist Data Visualization). Though our map of Cambridge with color-coded street names attempts to show disparities by gender, gender is better represented as a spectrum and not categories. In particular, though our dataset currently contains ascribed gender of historical figures in a binary fashiom, we recognize the existence and need to commemorate the lives of non-binary people and transgender women. For more resources for learning about and teaching gender, visit Teaching Tolerance.
 
-Try to only make changes to the respective html/css pairs to avoid complications (for the map I've created map.html and map.css and games has games.html and cards.css) -- the css files can all go into one file technically, but this is likely easier to learn. styles.css has global formatting like text size.
-
-Add any images into the "assets" folder, and if you do end up writing a script (either python or js, I think both will work) then put it in the Scripts folder.
-
-# tutorials
-I'd suggest doing codeacademy for HTML and CSS tutorials-- honestly like most coding things, there's loads of forums.
-
-For card flipping, here is a tutorial: https://www.w3schools.com/howto/howto_css_flip_card.asp just with CSS (this is why I made a cards.css file)
-
-
-# how to run
-to run this locally on your machine, go to the Terminal option along the top bar (between Run and Help) and select New Terminal then type
-
-npm install
-
-into your terminal.
-
-Once that has installed, type
-
-http-server
-
-then navigate to 
-
-http://127.0.0.1:8080/
-
-to see the site. use ctrl-shift-r for a hard refresh if it looks like things aren't updating.
-
-Use ctrl-c to stop the server from running. 
+Our interactive playing cards profile notable women from the Cambridge Women’s Heritage Project and research on enslaved peoples of Cambridge conducted by Grace Woodward. You can print out the cards, or even add your own heroes!
