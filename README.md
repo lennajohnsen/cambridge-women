@@ -10,3 +10,12 @@ Our Instagram filter is one technique which, by augmenting reality, aligns with 
 D’Ignazio and Klein remind us to “emphasize representational strategies premised on multiplicity rather than binaries, and acknowledge the limits of any binaristic view”, and suggest better representations of gender are continuous or multidimensional (Feminist Data Visualization). Though our map of Cambridge with color-coded street names attempts to show disparities by gender, gender is better represented as a spectrum and not categories. In particular, though our dataset currently contains ascribed gender of historical figures in a binary fashiom, we recognize the existence and need to commemorate the lives of non-binary people and transgender women. For more resources for learning about and teaching gender, visit Teaching Tolerance.
 
 Our interactive playing cards profile notable women from the Cambridge Women’s Heritage Project and research on enslaved peoples of Cambridge conducted by Grace Woodward. You can print out the cards, or even add your own heroes!
+
+# Documentation of Component Parts
+
+# Instagram Filter
+https://www.dropbox.com/scl/fi/bon3srbbhnh45ms7iyo40/Instagram-Filter.paper?dl=0&rlkey=lltkjrhl781qib1pv9hz9nek2
+
+# Cards
+https://www.dropbox.com/scl/fi/r0ut7fqt4itstj82brbtr/Women-of-Cambridge-Cards.paper?dl=0&rlkey=b2jmie8bbw17d2jrgvgrlvs8i
+
