@@ -5,7 +5,7 @@ Women Take the Streets focuses on disparities in the representation of women who
 
 Our project attempts to fulfill Mei-Po Kwan’s feminist visualization design principles by grounding mapping practices in our everyday experience of street signs (Mei-Po Kwan, 2002). Street signs are symbols which the viewer might never consider to be the result of historically-skewed local political processes. We seek to support women’s activism that challenges traditional power relations and forms of governance using GIS-based research and design.
 
-Berg and Kearns’ Naming as Norming (1996) describes how the naming places reinforces dominant societal ideologies by providing normality and legitimacy. Our Instagram filter is one technique which, by augmenting reality, works toward more inclusive knowledge production. The filter centers the standpoints of women who may have been excluded in their own times (and whose lives may have since gone without significant public commemoration) on the user's phone.
+Berg and Kearns’ Naming as Norming (1996) describes how naming places reinforces dominant societal ideologies by providing normality and legitimacy. By augmenting reality, our Instagram filter works toward more inclusive knowledge production. The filter centers the standpoints of women who may have been excluded in their own times (and whose lives may have since gone without significant public commemoration) on the user's phone.
 
 Though our map of Cambridge with color-coded street names attempts to show disparities by gender, we note that gender is better represented as a spectrum and not categories. D’Ignazio and Klein suggest better representations of gender are continuous or multidimensional (Feminist Data Visualization, 2020). Though the dataset the map is based on currently contains ascribed gender of historical figures in a binary fashiom, we recognize the existence and need to commemorate the lives of non-binary people and transgender women. For more resources for learning about and teaching gender, visit Teaching Tolerance: https://www.tolerance.org/topics/gender-sexual-identity
 
@@ -13,8 +13,8 @@ Our interactive playing cards profile notable women from the Cambridge Women’s
 
 # Documentation of Component Parts
 
-# Map of Street Names by Gender
-https://www.dropbox.com/s/9l100mbljngmzgx/Street%20Renaming%20Activity.docx?dl=0
+# Map of Streetnames
+https://paper.dropbox.com/doc/About-the-Interactive-Map-of-Cambridge-Streets--Az3Gs6ZsUpMslABBqhvYP3wHAQ-qEUA8x5bONGK52saY7O4M
 
 # Instagram Filter
 https://www.dropbox.com/scl/fi/bon3srbbhnh45ms7iyo40/Instagram-Filter.paper?dl=0&rlkey=lltkjrhl781qib1pv9hz9nek2
