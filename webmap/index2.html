@@ -24,46 +24,23 @@
     </head>
     <body>
 
-    <div class='header'>
+        <div class='header'>
 
-        <div class='site-title'>
-            <h1> WOMEN TAKE THE STREETS </h1>
-        </div>
-    
-        <div class='nav-icons'>
-            <div class="icon">
-                <a href="../index.html">
-                    <div class="icon">home</div>
-                </a>
-            </div> 
-            <div class="icon">
-                <a href="../process.html">
-                    <div class="icon">filter</div>
-                </a>
+            <div class='site-title'>
+                <h1>Street Map of Cambridge</h1>
             </div>
-            <div class="icon">
-                <a href="../cards.html">
-                    <div class="icon">cards</div>
-                </a>
+        
+            <div class='nav-icons'>
+                <a href="index.html">return home</a> 
+                <a href="process.html">process</a> 
+                <a href="cards.html">games</a>
+                <a href="map.html">map</a> 
             </div>
-            <div class="icon">
-                <a href="index2.html">
-                    <div class="icon">map</div>
-                </a> 
-            </div>
-        </div>
-    
-    </div>
-
-        <div class="content">
-            <h3> Mapping Gender </h3>
-            <p> While this map of Cambridge with color-coded street names attempts to show disparities by gender, gender is better represented as a spectrum and not categories. In particular, though our dataset currently contains ascribed gender of historical figures
-                in a binary fashiom, we recognize the existence and need to commemorate the lives of non-binary people and transgender women. For more resources for learning about and teaching gender,
-                visit <a href="https://www.tolerance.org/topics/gender-sexual-identity">Teaching Tolerance</a>. <br></p>
+        
         </div>
 
-        <div id="map">   </div>
-
+        <div id="map">
+        </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
@@ -212,7 +189,7 @@
                     return {
                 pane: 'pane_Streetnames_2',
                 opacity: 1,
-                color: 'rgba(244,117,223,1.0)',
+                color: 'rgba(185,15,251,1.0)',
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
@@ -225,7 +202,7 @@
                     return {
                 pane: 'pane_Streetnames_2',
                 opacity: 1,
-                color: 'rgba(57,101,204,1.0)',
+                color: 'rgba(15,251,185,1.0)',
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
@@ -238,7 +215,7 @@
                     return {
                 pane: 'pane_Streetnames_2',
                 opacity: 1,
-                color: 'rgba(51,181,73,1.0)',
+                color: 'rgba(163,171,179,1.0)',
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
@@ -306,7 +283,7 @@
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(112,30,219,1.0)',
+                fillColor: 'rgba(2,13,10,1.0)',
                 interactive: true,
             }
         }
