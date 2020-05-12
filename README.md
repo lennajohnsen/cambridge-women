@@ -14,7 +14,7 @@ Our interactive playing cards profile notable women from the Cambridge Women’s
 # Documentation of Component Parts
 
 # Map of Streetnames
-https://paper.dropbox.com/doc/About-the-Interactive-Map-of-Cambridge-Streets--Az3Gs6ZsUpMslABBqhvYP3wHAQ-qEUA8x5bONGK52saY7O4M
+https://www.dropbox.com/scl/fi/d86plbmcybrj9ub7pgjn1/Map-of-Cambridge-Street-Names.paper?dl=0&rlkey=mojsejtfg8qwuizm0b9f74x8m
 
 # Instagram Filter
 https://www.dropbox.com/scl/fi/bon3srbbhnh45ms7iyo40/Instagram-Filter.paper?dl=0&rlkey=lltkjrhl781qib1pv9hz9nek2
